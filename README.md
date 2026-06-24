@@ -1,4 +1,4 @@
-# YTRAG - AI-Powered Retrieval-Augmented Generation Chatbot
+# AI-Powered Retrieval-Augmented Generation Chatbot
 
 An AI-powered Retrieval-Augmented Generation (RAG) chatbot that allows users to query their own documents using natural language. The system automatically loads documents, generates embeddings using SentenceTransformers, performs semantic search using FAISS, and generates context-aware responses using Groq-hosted Large Language Models.
 
