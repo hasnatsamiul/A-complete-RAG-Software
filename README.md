@@ -73,10 +73,10 @@ The project provides a simple Streamlit-based chat interface for interacting wit
 
 ```bash
 # Clone repository
-git clone https://github.com/hasnatsamiul/YTRAG.git
+git clone https://github.com/hasnatsamiul/A-complete-RAG-Software.git
 
 # Enter project directory
-cd YTRAG
+cd A-complete-RAG-Software
 
 # Create virtual environment
 uv venv
