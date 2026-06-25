@@ -163,8 +163,8 @@ Provide a summary of the uploaded PDFs.
 **S M Hasnat Samiul**
 
 M.Sc. High Integrity Systems
-Frankfurt University of Applied Sciences
-smhasnats@gmail.com
+Frankfurt University of Applied Sciences,
+email: smhasnats@gmail.com
 
 ## License
 
