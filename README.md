@@ -139,6 +139,8 @@ What are the main findings of the uploaded documents?
 
 Provide a summary of the uploaded PDFs.
 ```
+<img width="1503" height="805" alt="Screenshot 2026-06-25 at 12 12 47" src="https://github.com/user-attachments/assets/ceee4b91-35db-4763-943e-459e0ba1a9e8" />
+
 
 ## Supported Embedding Models
 
