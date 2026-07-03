@@ -1,9 +1,17 @@
+
+
+
+
+
 import streamlit as st
 
 from src.search import RAGSearch
-from src.mongodb import MongoDBLogger
+# from src.mongodb import MongoDBLogger
+
+
 
 st.set_page_config(page_title="YTRAG Chatbot", page_icon="S")
+
 st.title("Ask anything about Temporal Knowledge Graph (TKG) and Its applications")
 
 
@@ -11,26 +19,32 @@ st.title("Ask anything about Temporal Knowledge Graph (TKG) and Its applications
 def load_rag():
     return RAGSearch()
 
-
-@st.cache_resource
-def load_mongodb_logger():
-    return MongoDBLogger()
+# @st.cache_resource
+# def load_mongodb_logger():
+#     return MongoDBLogger()
 
 
 rag_search = load_rag()
-mongo_logger = load_mongodb_logger()
+# mongo_logger = load_mongodb_logger()
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
+
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.write(msg["content"])
 
+
 query = st.chat_input("Ask something from your documents...")
 
+
 if query:
-    st.session_state.messages.append({"role": "user", "content": query})
+    st.session_state.messages.append({
+        "role": "user",
+        "content": query
+    })
 
     with st.chat_message("user"):
         st.write(query)
@@ -38,10 +52,12 @@ if query:
     with st.chat_message("assistant"):
         with st.spinner("Searching documents..."):
             answer = rag_search.search_and_summarize(query, top_k=3)
-
-            # Save user question and answer to MongoDB
-            mongo_logger.save_question_and_answer(query, answer)
-
             st.write(answer)
+#             # Save user question and answer to MongoDB
+#             mongo_logger.save_question_and_answer(query, answer)
 
-    st.session_state.messages.append({"role": "assistant", "content": answer})
+
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": answer
+    })
