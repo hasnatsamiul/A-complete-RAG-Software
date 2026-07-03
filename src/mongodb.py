@@ -9,7 +9,7 @@ load_dotenv()
 
 class MongoDBLogger:
     def __init__(self):
-        mongo_uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+        mongo_uri = os.getenv("MONGODB_URI")
         db_name = os.getenv("MONGODB_DB", "rag_chatbot")
         collection_name = os.getenv("MONGODB_COLLECTION", "user_questions")
 
