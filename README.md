@@ -3,6 +3,7 @@
 An AI-powered Retrieval-Augmented Generation (RAG) chatbot that allows users to query their own documents using natural language. The system automatically loads documents, generates embeddings using SentenceTransformers, performs semantic search using FAISS, and generates context-aware responses using Groq-hosted Large Language Models.
 
 The project provides a simple Streamlit-based chat interface for interacting with local document collections.
+Live: https://a-complete-rag-software-3ockwxfgcfp5uwgs3yjevp.streamlit.app/
 
 ## Features
 
